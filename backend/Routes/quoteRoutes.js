@@ -6,8 +6,9 @@ router.get("/", async (req, res) => {
     const pageSize = 9
     const total = await Quote.countDocuments({})
     const page = parseInt(req.query.page || 0)
-    const quotes = await Quote.find({}).limit(pageSize).skip(pageSize * page)
-    res.json({ total: Math.ceil(total / pageSize), quotes })
+    // const quotes = await Quote.find({}).limit(pageSize).skip(pageSize * page)
+    const quotes = await Quote.find({}).limit(pageSize + page)
+    res.json({ quotes })
     // console.log(quotes);
 })
 
@@ -19,7 +20,7 @@ router.get("/search", async (req, res) => {
         $text: {
             $search: q
         }
-    }).limit(pageSize).skip(pageSize * page)
+    }).limit(pageSize + page)
     // console.log(quotess)
     res.json(quotess)
 })

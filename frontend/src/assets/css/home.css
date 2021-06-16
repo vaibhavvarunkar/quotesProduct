@@ -1,19 +1,27 @@
+.header {
+  background: url(../images/bg.svg);
+  height: 49vh;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .showcase {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 45vh;
+  height: 35vh;
   z-index: 1;
 }
 
 .showcase h1 {
-  margin-top: 10rem;
+  margin-top: 8rem;
   text-transform: uppercase;
   font-size: 80px;
   font-weight: 600;
   text-align: center;
   z-index: 1;
+  color: white;
 }
 
 .searchBar {
@@ -51,7 +59,6 @@
   z-index: 2;
   height: 45px;
   padding: 0.4rem;
-  cursor: pointer;
   border: none;
 }
 
@@ -59,11 +66,18 @@
   margin-top: 1rem;
   width: 27vw;
   z-index: 1;
+  color: white;
 }
 
 .random-quote p {
   font-size: small;
   font-weight: bold;
+}
+
+.load-more {
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 
 .random-quote span {
@@ -131,4 +145,20 @@ span {
 
 .dot4 {
   background: #95f29b;
+}
+
+.load-more a {
+  cursor: pointer;
+  background-color: white;
+  border: 2px solid black;
+  padding: 0.5rem 0.5rem;
+  color: black;
+  border-radius: 10px;
+}
+
+.load-more a:hover {
+  background-color: black;
+  color: white;
+  transition: color 0.5s;
+  border-color: black;
 }

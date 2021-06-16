@@ -8,14 +8,26 @@
   width: 100%;
   padding: 15px;
   margin-bottom: 25px;
-  background: #fff;
+  /* background: #fff; */
   box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.05);
   border-radius: 5px;
   break-inside: avoid;
   z-index: 2;
 }
 
-.quote-div .flex-col:hover {
+.quote-div .flex-col:nth-child(3n + 1) {
+  background-color: #f3f802;
+}
+
+.quote-div .flex-col:nth-child(3n-1) {
+  background-color: rgba(67, 255, 255, 0.8);
+}
+.quote-div .flex-col:nth-child(3n) {
+  background-color: rgba(195, 67, 255, 0.7);
+}
+
+.inner-quote-div {
+  padding: 0 1rem 0 0;
 }
 
 .flex-col h4 {
@@ -50,4 +62,61 @@
   cursor: pointer;
   height: 16px;
   width: 16px;
+}
+
+#copy {
+  width: 1px;
+  height: 1px;
+  outline: none;
+  color: transparent;
+  border: none;
+  /* visibility: hidden; */
+}
+
+.popup-content {
+}
+
+.popup-input {
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border: none;
+  border-bottom: 2px solid black;
+  color: black;
+}
+
+.popup-input:focus {
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #808080;
+}
+
+.popup-p {
+  font-style: normal;
+  font-weight: 500;
+  cursor: pointer;
+  margin: 0.5rem 0;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+.popup-p1 {
+  color: #000000;
+  margin: 0.2rem;
+  font-weight: 400;
+}
+
+.popup-p span {
+  font-size: large;
+  color: 000000;
+}
+
+.popup-submit {
+  cursor: pointer;
+  margin: 1rem 0 1rem 7rem;
+}
+
+.popup-submit:hover {
+  color: black;
+  outline: black;
 }

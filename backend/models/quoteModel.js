@@ -1,4 +1,5 @@
 import mongoose from "mongoose"
+// import slugify from "slugify"
 
 const quoteSchema = mongoose.Schema(
     {
@@ -13,9 +14,11 @@ const quoteSchema = mongoose.Schema(
         Tags: {
             type: String,
             required: true
-        }
+        },
     }
 )
+
+
 
 quoteSchema.index({ "$**": "text" })
 
